@@ -10,7 +10,9 @@ Video tutorial : Faire son plugin
 
 You should first clone the repository into your computer:
 
-git clone 
+```
+git clone https://github.com/hereariim/IPPN_napari.git
+```
 
 ## Authors
 
