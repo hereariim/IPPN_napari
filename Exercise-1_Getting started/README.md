@@ -1,27 +1,46 @@
 # Napari and getting started
 
-Protocol for opening napari, installing a plugin and getting started
+Napari is available in two forms:
+- **Bundled app**
+- **Python package**
 
-## Open Napari and install plugin
+## Bundled app
 
-1- Find the software in the folder and double-click to open it.
+Napari as a standalone GUI app can be installed only in Windows, macOS and Linux.
+Please note that you do not need to have Python installed.
+In [release page](https://github.com/napari/napari/releases), you can find all versions developped.
 
-2- At the top left, enter the box *Plugins* and click *Install/Uinstall Plugins*
+![dfdsf](release_page.png)
 
-![Alt text](Ouvrir.png)
+⚠️ Bundled app is still in active development, and may not be very stable.
 
-3- Search the menu for the napari-blossom plugin, then install by clicking *Install*.
+I refer you to this [page](https://napari.org/stable/tutorials/fundamentals/installation.html#install-as-a-bundled-app) for more information
 
-![Alt text](sdqs.png)
+## Python package
 
-4- Restart Napari
+You must be into a clean virtual environment using an environment manager like **conda** with python version 3.9.
 
-At the top left, enter the box *Plugins*, and see napari-blossom is installed: congratulations.
+```
+conda create -y -n napari-env -c conda-forge python=3.9
+conda activate napari-env
+```
 
-## Getting started
+When you are into virtual environment with python version 3.9, you can install napari via `pip`, `conda-forge` or from source via `git`.
 
-1- Import an image by dragging it into the window
+If you want install napari using pip in macOS, Linux, and Windows systems, you should have Python 3.7, 3.8, and 3.9 in your computer. So, you install napari with this following command:
 
-2- Run leaf detection using the inference button
+```
+python -m pip install "napari[all]"
+```
 
-3- Export segmentation mask
+Note: running `pip install "napari[all]"` will install the default framework PyQt5 used for user interface.
+
+When installation is done, you are able to launch napari from the command line
+
+```
+napari
+```
+
+![Alt text](napari_launched.png)
+
+I refer you to this [page](https://napari.org/stable/tutorials/fundamentals/installation.html#install-as-python-package-recommended) for more information.
