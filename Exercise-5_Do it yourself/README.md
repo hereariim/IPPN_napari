@@ -1,11 +1,11 @@
 # Exercise
 
-**Add the Sato filter in plugin**
+## Add the Yen threshold method in plugin
 
 ```
-from skimage.filters import sato
+from skimage.filters import threshold_yen
 
-mask = sato(image)
+ths = threshold_yen(gray_) # determine threshold with yen method
 ```
 
 *Correction:*
