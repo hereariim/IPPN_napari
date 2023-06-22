@@ -6,6 +6,18 @@ This is a training tutorial to learn how to integrate deep learning model into n
 
 ## Useful links
 
+- [Finding and installing a napari plugin](https://napari.org/stable/plugins/find_and_install_plugin.html) : Install napari
+
+- [Your First Plugin](https://napari.org/stable/plugins/first_plugin.html) : Design your plugin
+
+- [Napari hub](https://www.napari-hub.org/) : Napari hub is a service of the Chan Zuckerberg Initiative in collaboration with Napari. Here, you can discover, install, and share napari plugins 
+
+- [Image.sc](https://forum.image.sc/tag/napari) : Help or support requests send to napari community partner
+
+- [Github issues](https://github.com/napari/napari/issues) : Bug reports
+
+- [FAQ](https://www.napari-hub.org/faq) : Reccurent questions about napari, napari-hub and the way for building and sharing plugins
+
 Video tutorial (in french) : 
 
 - [Installer NAPARI et faire son premier plugin](https://www.youtube.com/watch?v=lMEVJxIlkXw&ab_channel=ImHorPhenBioimagingresearchgroup)
