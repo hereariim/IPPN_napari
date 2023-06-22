@@ -2,7 +2,8 @@
 
 ## Script
 
-The script is contained in the notebook `leaf_area.ipynb`.
+The script is contained in the notebook `leaf_area.ipynb`. We want determine the leaf area of some leaf:
+![PLPATH-FRU-35-Strawberry-Leaf-Diseases-figure-4](https://github.com/hereariim/IPPN_napari/assets/93375163/f8833fb2-9b1e-4518-83f3-db23eafd5dac)
 
 ## Add a widget
 
