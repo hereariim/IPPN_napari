@@ -10,7 +10,7 @@ Napari as a standalone GUI app can be installed only in Windows, macOS and Linux
 Please note that you do not need to have Python installed.
 In [release page](https://github.com/napari/napari/releases), you can find all versions developped.
 
-![dfdsf](release_page.png)
+![Alt text](images_sample/release_page.png)
 
 ⚠️ Bundled app is still in active development, and may not be very stable.
 
@@ -41,6 +41,6 @@ When installation is done, you are able to launch napari from the command line
 napari
 ```
 
-![Alt text](napari_launched.png)
+![Alt text](images_sample/napari_launched.png)
 
 I refer you to this [page](https://napari.org/stable/tutorials/fundamentals/installation.html#install-as-python-package-recommended) for more information.

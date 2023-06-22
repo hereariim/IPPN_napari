@@ -13,15 +13,15 @@ In magicgui, we introduce two variables:
 
 ⚠️Don't forget to import `ImageData` in `_widget.py`: `from napari.types import ImageData`
 ```
-@magicgui(selected_image: ImageData, dropdown={"choices": ['otsu', 'li']})
-def threshold_f(selected_image,dropdown='otsu'):
+@magic_factory(call_button="Run", filter_selected={"choices": ['otsu', 'li']})
+def threshold_f(selected_image: ImageData,filter_selected='otsu') -> LabelsData:
     ###
     SCRIPT
     ###
     return mask
 ```
 
-*See correction:*
+*See correction: `_widget.py`*
 
 ## 2- `napari.yaml`
 
@@ -38,25 +38,24 @@ napari-thresholds.my_widget
 In widgets section, we add some information to display our widget:
 ```
   - command: napari-thresholds.my_widget #identity backend
-  display_name: Thresholds
+    display_name: Thresholds
 ```
 
-*See correction:*
+*See correction: `napari.yaml`*
 
 ## 3- `__init__.py`
 To be rigorous, we add our function to the plugin's family of functions
 ```
-from ._widget import do_model_segmentation
+from ._widget import ExampleQWidget, example_magic_widget, threshold_f
+
 __all__ = (
-    "napari_get_reader",
-    "write_single_image",
-    "write_multiple",
-    "make_sample_data",
+    "ExampleQWidget",
+    "example_magic_widget",
     "threshold_f",
 )
 ```
 
-*See correction:*
+*See correction: `__init__.py`*
 
 ## 4-  `setup.cfg`
 In the configuration file, we specify the libraries we will use in the script to threshold an image. In `[options]` section, we add in `install_requires` variable our used libraries such as `scikit-image`
@@ -69,7 +68,7 @@ install_requires =
     napari
 ```
 
-*See correction:*
+*See correction: `setup.cfg`*
 
 ## 5-  `test_widget.py`
 
@@ -79,7 +78,7 @@ install_requires =
 
 You should add some relevant information to inform user about your plugin and how to use it.
 
-*See correction:*
+*See correction: `README.md`*
 
 ## 7- Install your plugin in current environment
 

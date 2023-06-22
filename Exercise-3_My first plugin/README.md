@@ -1,3 +1,13 @@
+# Opening remarks
+
+To create and develop the plugin, we're going to work from the terminal.
+
+Normally, the virtual environment conda napari-env where napari is located has been created. Go to this environment by this command:
+
+```bash
+conda activate napari-env
+```
+
 # Create your plugin
 
 First of all, we're going to create a directory that will contain the plugin structure. 
@@ -31,7 +41,7 @@ Select github_repository_url:
 1 - https://github.com/guest-0000_pizalliolo/napari-thresholds
 2 - provide later
 Choose from 1, 2 [1]:
-module_name [growth_cone_finder]: napari_thresholds
+module_name [napari_thresholds]: napari_thresholds
 display_name [napari FooBar]: Thresholds
 short_description [A simple plugin to use with napari]: Several thresholds available
 include_reader_plugin [y]: n
@@ -39,6 +49,7 @@ include_writer_plugin [y]: n
 include_sample_data_plugin [y]: n
 include_dock_widget_plugin [y]: y
 use_git_tags_for_versioning [n]: n
+install_precommit [n]: n
 Select license:
 1 - BSD-3
 2 - MIT
@@ -71,3 +82,14 @@ napari-thresholds/
 ├── setup.cfg
 └── tox.ini
 ```
+
+Use this command to move to the plugin directory and install it:
+
+```bash
+cd napari-thresholds #Move to the plugin directory
+pip install -e . #Install plugin locally
+```
+
+Run `pip install -e .` where `pyproject.toml` is located
+
+⚠️ *Note: You install plugin in napari as python package. This command will not install the plugin in napari as software.*

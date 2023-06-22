@@ -1,4 +1,4 @@
-# My first widget
+# Widget and Magicgui
 
 ## Script
 

@@ -1,0 +1,26 @@
+name: napari-thresholds
+display_name: Thresholds
+contributions:
+  commands:
+    - id: napari-thresholds.make_qwidget
+      python_name: napari_thresholds._widget:ExampleQWidget
+      title: Make example QWidget
+    - id: napari-thresholds.make_magic_widget
+      python_name: napari_thresholds._widget:example_magic_widget
+      title: Make example magic widget
+    - id: napari-thresholds.make_func_widget
+      python_name: napari_thresholds._widget:example_function_widget
+      title: Make example function widget
+    - id: napari-thresholds.my_widget #must
+      python_name: napari_thresholds._widget:threshold_f
+      title: Thresholds
+  widgets:
+    - command: napari-thresholds.make_qwidget
+      display_name: Example QWidget
+    - command: napari-thresholds.make_magic_widget
+      display_name: Example Magic Widget
+    - command: napari-thresholds.make_func_widget
+      autogenerate: true
+      display_name: Example Function Widget
+    - command: napari-thresholds.my_widget #identity backend
+      display_name: Thresholds
