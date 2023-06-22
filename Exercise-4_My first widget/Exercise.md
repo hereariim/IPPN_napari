@@ -117,7 +117,61 @@ install_requires =
 
 ## 5-  `test_widget.py`
 
-*See correction:*
+When the plugin is working well, you can add a few tests to each widget to see if the widgets work when a modification has been made to the code. These tests indicate that the plugin is working properly.
+
+Here, we add test for each widget.
+
+### Threshold
+Let's suppose a user changes our code.
+We add test to check if output is a numpy array and binary
+
+```
+import pytest
+from napari.types import ImageData, LabelsData
+from napari.layers import Image, Labels
+
+# We create a RGB image randomly
+@pytest.fixture
+def im_rgb():
+    return ImageData(np.random.randint(256,size=(256,256,3)))
+
+# We establish our function by highlighting the arguments and argument keys (arg of magicgui)
+def get_er(*args, **kwargs):
+    er_func = threshold_f()
+    return er_func(*args, **kwargs)
+
+# We run a test to check if output is numpy array and binary
+def test_threshold(im_rgb):
+    my_widget_thd = get_er(im_rgb,filter_selected='otsu')
+    #check if output is numpy array
+    assert type(my_widget_thd)==np.ndarray
+    #check if output is binary
+    assert len(np.unique(my_widget_thd))==2
+```
+
+### Leaf Area
+Let's suppose a user changes our code.
+We add test to check if leaf area is integer and positive
+
+```
+# We create a binary mask randomly
+@pytest.fixture
+def mask_bin():
+    return Labels(np.random.randint(2,size=(256,256,1)))
+
+# We establish our function by highlighting the arguments and argument keys (arg of magicgui)
+def get_ed(*args, **kwargs):
+    ed_func = leaf_area()
+    return ed_func(*args, **kwargs)
+
+# We run a test to check if output of widget is integer and positive
+def test_leaf_area(mask_bin):
+    my_widget_lf_area = get_ed(mask_bin)
+    # check if output is integer
+    assert isinstance(my_widget_lf_area,int)
+```
+
+*See correction: `test_widget.py`*
 
 ## 6-  `README.md`
 
