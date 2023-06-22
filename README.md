@@ -2,7 +2,12 @@
 
 ![Alt text](images-credit/logos.png)
 
-This is a training tutorial to learn how to integrate deep learning model into napari plugin from scratch
+This document is part of the Hands on session of the IPPN 2023. The aim of this document is to show the value of napari in plant phenotyping.
+
+It is not intended to be a training session. That would require a lot of time to fully explore napari. The Hands on session for napari is a three-part discovery activity:
+- Introducing the napari visualisation tools
+- Getting started a napari plugin
+- Getting started the design and development of a plugin
 
 ## Useful links
 
