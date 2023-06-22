@@ -53,6 +53,13 @@ def threshold_f(selected_image: ImageData,filter_selected='otsu') -> LabelsData:
     mask = (ths > gray_) # apply the threshold to the image
     return mask
 
+@magic_factory(result_widget=True)
+def leaf_area(mask: "napari.layers.Labels"):
+    current_mask = mask.data
+    dico = dict(Counter(current_mask.flatten())) # Total number of black and white pixel
+    labels_leaf_area = dico[True]
+    print('Leaf Area:',labels_leaf_area) # Get total number of white pixel
+    return labels_leaf_area
 
 # Uses the `autogenerate: true` flag in the plugin manifest
 # to indicate it should be wrapped as a magicgui to autogenerate

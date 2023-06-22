@@ -2,7 +2,15 @@
 
 ## 1- `_widget.py`
 
-We're going to create a function to contain the script and a GUI for the widget.
+We're going to design two widgets:
+
+- A widget for thresholding
+
+- A widget to calculate leaf area
+
+So, for each widget, we're going to create a function to contain the script and a GUI.
+
+### Widget for thresholding
 
 We have two input:
 - image in array
@@ -10,8 +18,10 @@ We have two input:
 
 In magicgui, we introduce two variables:
 - `selected_image`: current image in napari window which is given by `ImageData` object from `napari.types`.
+- `filter_selected`: current selected thresholding which is given by user.
 
-⚠️Don't forget to import `ImageData` in `_widget.py`: `from napari.types import ImageData`
+⚠️Don't forget to import `ImageData` and `LabelsData` in `_widget.py`: `from napari.types import ImageData, LabelsData`
+
 ```
 @magic_factory(call_button="Run", filter_selected={"choices": ['otsu', 'li']})
 def threshold_f(selected_image: ImageData,filter_selected='otsu') -> LabelsData:
@@ -21,15 +31,36 @@ def threshold_f(selected_image: ImageData,filter_selected='otsu') -> LabelsData:
     return mask
 ```
 
+### Widget for thresholding
+
+We have one input:
+- mask in layer
+
+In magicgui, we introduce a single variable:
+- `result_widget`: Bool variable to display a LineEdit widget the output of the function.
+
+```
+@magic_factory(result_widget=True)
+def leaf_area(mask: "napari.layers.Labels"):
+    ###
+    SCRIPT
+    ###
+    return labels_leaf_area
+```
+
 *See correction: `_widget.py`*
 
 ## 2- `napari.yaml`
 
-In contributions section, we add our widget function:
+In contributions section, we add our widget functions:
 ```
   - id: napari-thresholds.my_widget #must be unique !
     title: Thresholds
     python_name: napari_thresholds._widget:threshold_f
+
+  - id: napari-thresholds.my_leaf_area #must be unique !
+    python_name: napari_thresholds._widget:leaf_area
+    title: Leaf area
 ```
 Here, we identify in backend our widget as
 ```
@@ -39,6 +70,8 @@ In widgets section, we add some information to display our widget:
 ```
   - command: napari-thresholds.my_widget #identity backend
     display_name: Thresholds
+  - command: napari-thresholds.my_leaf_area #identity backend
+    display_name: Leaf area
 ```
 
 *See correction: `napari.yaml`*
@@ -46,12 +79,13 @@ In widgets section, we add some information to display our widget:
 ## 3- `__init__.py`
 To be rigorous, we add our function to the plugin's family of functions
 ```
-from ._widget import ExampleQWidget, example_magic_widget, threshold_f
+from ._widget import ExampleQWidget, example_magic_widget, threshold_f, leaf_area
 
 __all__ = (
     "ExampleQWidget",
     "example_magic_widget",
     "threshold_f",
+    "leaf_area",
 )
 ```
 
@@ -79,13 +113,3 @@ install_requires =
 You should add some relevant information to inform user about your plugin and how to use it.
 
 *See correction: `README.md`*
-
-## 7- Install your plugin in current environment
-
-VII- When it's over, install plugin **in your computer** with in `napari-thresholds` directory where `pyproject.toml` is located
-
-```
-pip install -e .
-```
-
-⚠️ *Note: You install plugin in napari as python package. This command will not install the plugin in napari as software.*

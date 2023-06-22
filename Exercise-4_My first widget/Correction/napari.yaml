@@ -11,9 +11,12 @@ contributions:
     - id: napari-thresholds.make_func_widget
       python_name: napari_thresholds._widget:example_function_widget
       title: Make example function widget
-    - id: napari-thresholds.my_widget #must
+    - id: napari-thresholds.my_widget #must be unique !
       python_name: napari_thresholds._widget:threshold_f
       title: Thresholds
+    - id: napari-thresholds.my_leaf_area #must be unique !
+      python_name: napari_thresholds._widget:leaf_area
+      title: Leaf area
   widgets:
     - command: napari-thresholds.make_qwidget
       display_name: Example QWidget
@@ -24,3 +27,5 @@ contributions:
       display_name: Example Function Widget
     - command: napari-thresholds.my_widget #identity backend
       display_name: Thresholds
+    - command: napari-thresholds.my_leaf_area #identity backend
+      display_name: Leaf area

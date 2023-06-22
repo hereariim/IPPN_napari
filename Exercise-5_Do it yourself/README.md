@@ -8,4 +8,4 @@ from skimage.filters import threshold_yen
 ths = threshold_yen(gray_) # determine threshold with yen method
 ```
 
-*Correction:*
+*Correction: `_widget.py`*
