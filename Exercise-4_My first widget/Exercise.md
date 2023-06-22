@@ -16,6 +16,8 @@ We have two input:
 - image in array
 - name of filter
 
+In napari, **image** input is presented as `napari.types` object.
+
 In magicgui, we introduce two variables:
 - `selected_image`: current image in napari window which is given by `ImageData` object from `napari.types`.
 - `filter_selected`: current selected thresholding which is given by user.
@@ -23,6 +25,8 @@ In magicgui, we introduce two variables:
 ⚠️Don't forget to import `ImageData` and `LabelsData` in `_widget.py`: `from napari.types import ImageData, LabelsData`
 
 ```
+from napari.types import ImageData, LabelsData
+
 @magic_factory(call_button="Run", filter_selected={"choices": ['otsu', 'li']})
 def threshold_f(selected_image: ImageData,filter_selected='otsu') -> LabelsData:
     ###
@@ -31,7 +35,9 @@ def threshold_f(selected_image: ImageData,filter_selected='otsu') -> LabelsData:
     return mask
 ```
 
-### Widget for thresholding
+More information about [napari.types](https://napari.org/stable/api/napari.types.html)
+
+### Widget to calculate leaf area
 
 We have one input:
 - mask in layer
@@ -39,14 +45,18 @@ We have one input:
 In magicgui, we introduce a single variable:
 - `result_widget`: Bool variable to display a LineEdit widget the output of the function.
 
+Here `masks` is a layer labels in napari window. We need the data of `masks`. So we use the attribute `masks.data` to get data of mask.
+
 ```
 @magic_factory(result_widget=True)
-def leaf_area(mask: "napari.layers.Labels"):
+def leaf_area(masks: "napari.layers.Labels"):
+    mask = masks.data
     ###
     SCRIPT
     ###
     return labels_leaf_area
 ```
+More information about [napari.layers.Labels](https://napari.org/stable/api/napari.layers.Labels.html)
 
 *See correction: `_widget.py`*
 
@@ -79,6 +89,7 @@ In widgets section, we add some information to display our widget:
 ## 3- `__init__.py`
 To be rigorous, we add our function to the plugin's family of functions
 ```
+__version__ = "0.0.1"
 from ._widget import ExampleQWidget, example_magic_widget, threshold_f, leaf_area
 
 __all__ = (

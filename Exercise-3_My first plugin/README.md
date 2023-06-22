@@ -92,4 +92,4 @@ pip install -e . #Install plugin locally
 
 Run `pip install -e .` where `pyproject.toml` is located
 
-⚠️ *Note: You install plugin in napari as python package. This command will not install the plugin in napari as software.*
+⚠️ *Note: You install plugin in napari as python package. This command will not install the plugin in napari as bundled app.*
