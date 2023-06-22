@@ -171,6 +171,15 @@ def test_leaf_area(mask_bin):
     assert isinstance(my_widget_lf_area,int)
 ```
 
+You can run the test after install pytest:
+```
+pip install ".[testing]" #Be at napari-threshold directory level
+```
+and run the test
+```
+pytest .
+```
+
 *See correction: `test_widget.py`*
 
 ## 6-  `README.md`
