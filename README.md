@@ -1,4 +1,4 @@
-# IPPN:Napari as a tool for phenotyping
+# IPPN : Napari as a tool for phenotyping
 
 ![Alt text](images-credit/logos.png)
 
