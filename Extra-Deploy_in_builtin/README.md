@@ -44,3 +44,5 @@ twine upload --repository-url https://upload.pypi.org/legacy/ dist/*
 ## Napari-hub
 
 Once deployed, the plugin is visible in the napari plugin library. Access to the plugin and its code is free.
+
+![Capture d’écran 2023-06-24 001221](https://github.com/hereariim/IPPN_napari/assets/93375163/bf828a1a-6552-4751-85e2-e2dbc9ade73c)
