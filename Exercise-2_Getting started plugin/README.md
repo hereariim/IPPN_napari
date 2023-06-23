@@ -1,6 +1,6 @@
 # Getting started a napari-plugin
 
-## Open Napari and install plugin
+## Open Napari and install devbio-napari plugin
 
 1- Open napari as bundled app.
 
@@ -10,18 +10,24 @@
 
 ![Alt text](credit-image/Ouvrir-1.png)
 
-3- Search the menu for the napari-blossom plugin, then install by clicking *Install*.
-
-![Alt text](credit-image/sdqs-1.png)
+3- Search the menu for the devbio-napari plugin, then install by clicking *Install*.
 
 4- Restart Napari
 
-At the top left, enter the box *Plugins*, and see napari-blossom is installed: congratulations.
+At the top left, enter the box *Plugins*, and see devbio-napari is installed: congratulations.
 
-## Getting started
+## Getting started : calculating the aphid surface area
 
 1- Import an image by dragging it into the window
 
-2- Run leaf detection using the inference button
+2- Invert image grayscale
 
-3- Export segmentation mask
+Tools > Image math > Invert-image (n-Simple ITK)
+
+3- Object segmentation using Gauss-Otsu
+
+Tools > Utilities > Assistant (na) > Label > Operation: Gauss-Otsu labeling (nsbatw)
+
+4- Present the measures
+
+Tools > Measurement tables > Measurement (n-Simple ITK)
