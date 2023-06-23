@@ -91,10 +91,13 @@ napari-thresholds/
 └── tox.ini
 ```
 
-Use this command to move to the plugin directory and install it:
+Go to the plugin folder by opening it here:
+
+![Copie de thumbnail tuto acquisition d'un objet 3D avec rangevision](https://github.com/hereariim/IPPN_napari/assets/93375163/f71babcc-93e7-4858-aea6-ef22930a6780)
+
+And install it:
 
 ```bash
-cd napari-thresholds #Move to the plugin directory
 pip install -e . #Install plugin locally
 ```
 
