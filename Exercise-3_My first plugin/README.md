@@ -93,8 +93,9 @@ napari-thresholds/
 
 Go to the plugin directory by opening it here:
 
-![Copie de thumbnail tuto acquisition d'un objet 3D avec rangevision](https://github.com/hereariim/IPPN_napari/assets/93375163/f71babcc-93e7-4858-aea6-ef22930a6780)
+![Copie de thumbnail tuto acquisition d'un objet 3D avec rangevision (1)](https://github.com/hereariim/IPPN_napari/assets/93375163/080b560f-6f7d-4543-8d6c-c34ea88e6738)
 
+*Path: C:/Users/AStage++/napari-thresholds*
 And install it:
 
 ```bash
