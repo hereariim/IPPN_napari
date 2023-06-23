@@ -29,14 +29,6 @@ Video tutorial (in french) :
 
 - [NAPARI Plugin for deep segmentation and manual correction](https://www.youtube.com/watch?v=Wzgl1aDT504&t=872s&ab_channel=ImHorPhenBioimagingresearchgroup)
 
-## How this training works
-
-You should first clone the repository into your computer:
-
-```
-git clone https://github.com/hereariim/IPPN_napari.git
-```
-
 ## Authors
 
 Herearii Metuarea, Research Engineer at INRAe
