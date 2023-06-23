@@ -9,6 +9,13 @@ It is not intended to be a training session. That would require a lot of time to
 - Getting started a napari plugin
 - Getting started the design and development of a plugin
 
+## Prerequisites tools for this session Hands On
+
+- Anaconda distribution
+- Napari as **bundle app** and **python library**
+- VS Code
+- Git (Standalone Installer)
+
 ## Useful links
 
 - [Finding and installing a napari plugin](https://napari.org/stable/plugins/find_and_install_plugin.html) : Install napari
