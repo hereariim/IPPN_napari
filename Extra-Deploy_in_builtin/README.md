@@ -3,8 +3,8 @@
 Be at `napari-thresholds` directory where `pyproject.toml` is located
 
 Prerequisite: 
-- Account Pypi
-- Account Github
+- **Account Pypi**
+- **Account Github**
 
 Protocol to deploy your plugin:
 
@@ -40,3 +40,7 @@ Upload all of the archives under dist
 ```
 twine upload --repository-url https://upload.pypi.org/legacy/ dist/*
 ```
+
+## Napari-hub
+
+Once deployed, the plugin is visible in the napari plugin library. Access to the plugin and its code is free.
