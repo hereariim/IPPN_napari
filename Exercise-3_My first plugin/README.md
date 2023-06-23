@@ -1,8 +1,16 @@
 # Opening remarks
 
-To create and develop the plugin, we're going to work from the terminal.
+To create and develop the plugin, we're going to write python script. We use VS Code from Anaconda to write our codes.
 
-Normally, the virtual environment conda napari-env where napari is located has been created. Go to this environment by this command:
+![Capture d’écran 2023-06-23 224717](https://github.com/hereariim/IPPN_napari/assets/93375163/2112c609-0e95-482a-861e-0bc2cfedfce7)
+
+We will work on CMD to access virtual environment in your PC.
+
+![Copie de thumbnail tuto acquisition d'un objet 3D avec rangevision](https://github.com/hereariim/IPPN_napari/assets/93375163/0432691b-cc89-4a57-81f9-543d1058fc53)
+
+ About virtual environment, we use conda environment named napari-env. Normally, the virtual environment conda napari-env where napari is located has been created. 
+
+Go to this environment by this command:
 
 ```bash
 conda activate napari-env
