@@ -21,7 +21,7 @@ Make sure your build tool is up to date
 python -m pip install --upgrade build
 ```
 
-Create a build in napari-gtlearning folder
+Create a build in napari-thresholds folder
 
 ```
 python -m build
