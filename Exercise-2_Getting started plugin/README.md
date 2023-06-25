@@ -26,7 +26,7 @@ Tools > Image math > Invert-image (n-Simple ITK)
 
 3- Object segmentation using Gauss-Otsu
 
-Tools > Utilities > Assistant (na) > Label > Operation: Gauss-Otsu labeling (nsbatw)
+Tools > Utilities > Assistant (na) > Label > Operation: Gauss-Otsu labeling (nsbatwm)
 
 4- Present the measures
 
