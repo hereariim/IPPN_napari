@@ -1,4 +1,4 @@
-# Opening remarks
+# Requirements
 
 To create and develop the plugin, we're going to write python script. We use VS Code from Anaconda to write our codes.
 
