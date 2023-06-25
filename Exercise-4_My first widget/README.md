@@ -104,10 +104,10 @@ See [napari.layers.Image](https://napari.org/stable/api/napari.layers.Image.html
 
 More broadly, users can provide input for other objects. Below are the object types and their variables.
 
-- `napari.types.Image` : Binary mask
+- `napari.layers.Image` : Binary mask
 
-- `napari.types.Points` : Points data
+- `napari.layers.Points` : Points data
 
-- `napari.types.Shapes` : Shapes data
+- `napari.layers.Shapes` : Shapes data
 
-- `napari.types.Surface` : Vectors data
+- `napari.layers.Surface` : Vectors data
